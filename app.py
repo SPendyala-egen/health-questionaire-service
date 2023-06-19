@@ -27,10 +27,6 @@ class SingletonMap:
     def get_item(self, key, default=None):
         return self.map.get(key, default)
 
-    def print_map(self):
-        for key, value in self.map.items():
-            print(key, value)
-
 def generate_chat_response(user_input):
     # Call the OpenAI API to generate a response
     response = openai.Completion.create(
