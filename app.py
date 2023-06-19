@@ -4,6 +4,7 @@ import openai
 import config
 import requests
 
+
 openai.api_key = config.OPENAI_API_KEY
 ipstack_api_key = config.IPSTACK_API_KEY
 geolocator = Nominatim(user_agent='myGeocoder')  
