@@ -32,7 +32,7 @@ def generate_chat_response(user_input):
     response = openai.Completion.create(
         engine='text-davinci-003',
         prompt=user_input,
-        max_tokens=200,
+        max_tokens=500,
         n=1,
         stop=None,
         temperature=0.7
