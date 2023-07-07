@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify, g
 from geopy.geocoders import Nominatim
+from flask_cors import CORS
 import openai
 import config
 import requests
@@ -10,6 +11,7 @@ ipstack_api_key = config.IPSTACK_API_KEY
 geolocator = Nominatim(user_agent='myGeocoder')  
 
 app = Flask(__name__)
+CORS(app)
 
 class SingletonMap:
     _instance = None
